@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="normalize.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="sasano.css">
+    <link rel="stylesheet" type="text/css" href="vegas.min.css"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script script type="text/javascript" src="vegas.min.js"></script>
+    <script>
+    $(function() {
+    $('body').vegas({
+        transition: 'fade',
+        animation: 'random',
+        loop: true,
+        slides: [
+            { src: 'images/tabako1.jpg' },
+            { src: 'images/tabako2.jpg' },
+            { src: 'images/tabako3.jpg' },
+            { src: 'images/tabako4.jpg' }
+        ],
+    });
+});    
+    </script>
+    <title>Cigarette</title>
+</head>
+
+<body>
+    <header>
+        <h1>**タバコの年間消費額計算をしてみましょう**</h1>
+    </header>
+
+    <div id="intro">
+        <p>一年間にタバコにいくらお金をかけていますか？タバコは金出して不健康を買うようなものです。仮にタバコを辞めたら、他にどんなことができるかを見てみましょう。</p>
+    </div>  
+
+    <contents> 
+        <div class = "section">
+            <div class="direction">1.まず週にいくらタバコに使っているかを出し、計算ボタンを押しましょう。年間でいくらになるかが出ます。</div>
+            <form class="form">
+                <p>週に使う金額(5桁までの数字で入力してください)</p>
+                <input type="tel" id="weekly" name="weekly" size="5" value="0" maxlength="5">￥
+                <p><input type="button" id="button" name="button" value="計算"></p><br>
+                <p>年間にタバコに使うと想定される金額</p>
+                <input type="tel" id="yearly" name="yearly" placeholder="結果表示" size="7" readonly>￥          
+            </form>     
+
+            <script script type="text/javascript" src="sasano.js"></script>
+            
+            <div class="direction">2.年間に使う金額でできる可能性があるものが,次のリストの中から点滅します。ぜひ参考にしてください。</div>
+                <div class="two_lists">
+                    <div class="list"> 
+                        <ul>
+                        <li id="zero">¥5000 .. 飲み会1回分</li>    
+                        <li id="one">¥10000 .. 飲み会2回分</li>
+                        <li id="two">¥20000 .. 飲み会4回分</li>
+                        <li id="three">¥30000 .. 飲み会6回分</li>
+                        <li id="four">¥40000 .. 飲み会8回分</li>
+                        <li id="five">¥50000 .. 飲み会10回分</li>
+                        </ul>
+                    </div>
+                    <div class="list">
+                        <ul>
+                        <li id="six">¥60000 .. 飲み会12回分</li>
+                        <li id="seven">¥70000 .. 飲み会14回分</li>
+                        <li id="eight">¥80000 .. 飲み会16回分</li>
+                        <li id="nine">¥90000 .. 飲み会18回分</li>
+                        <li id="ten">¥100000 .. 飲み会20回分</li>
+                        <li id="more">¥100000以上 .. 飲み会20回分以上</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>                           
+    </contents>
+</body>
+</html>
